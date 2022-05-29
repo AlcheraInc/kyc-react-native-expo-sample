@@ -19,11 +19,11 @@ export const RefinedWebView = ({ handleSetRef, sendMessage, onMessage }) => {
   }, []);
 
   if (!webViewState) {
+    //no access authority for camera and gallery. check allowance of authortiy.
     return (
       <View>
         <Text>
           카메라/갤러리 접근 권한이 없습니다. 권한 허용 후 이용해주세요.
-          //no access authority for camera and gallery. check allowance of authortiy.
         </Text>
       </View>
     );
