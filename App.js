@@ -8,15 +8,15 @@ export default App = () => {
     webViewRef = _ref;
   };
 
-  //결과를 반환 받습니다.
+  //결과를 반환 받습니다. (get result back)
   const onMessage = (e) => {
     var kyc_result = JSON.parse(decodeURIComponent(atob(e.nativeEvent.data)));
     console.log(kyc_result);
   };
 
-  //PostMessage로 사용자 정보를 보냅니다.
+  //PostMessage로 사용자 정보를 보냅니다. (send user info through postMessage)
   const sendMessage = (e) => {
-    //기존 고객 정보를 가지고 있을 경우 : 사전 정의된 사용자의 정보를 보냅니다.
+    //기존 고객 정보를 가지고 있을 경우 : 사전 정의된 사용자의 정보를 보냅니다. (pre-given information of end user)
     var userPreDefined = {
       name: "홍길동",
       birthday: "2000-12-25",
@@ -24,7 +24,7 @@ export default App = () => {
       email: "debug@debug.com",
     };
 
-    //고객사에 부여된 User 계정 정보
+    //고객사에 부여된 User 계정 정보 (account information of client such as customer id, id and key)
     var requestData = JSON.stringify({
       customer_id: "12",
       id: "demoUser",
