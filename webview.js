@@ -7,7 +7,7 @@ export const RefinedWebView = ({ handleSetRef, sendMessage, onMessage }) => {
   const [webViewState, setwebViewState] = useState(false);
   useEffect(() => {
     const fn = async () => {
-      //카메라 권한 체크 : expo
+      //카메라 권한 체크(check camera permission) : expo
       const { status } = await Camera.requestCameraPermissionsAsync();
       console.log(status);
       if (status === "granted") {
@@ -19,11 +19,10 @@ export const RefinedWebView = ({ handleSetRef, sendMessage, onMessage }) => {
   }, []);
 
   if (!webViewState) {
-    //no access authority for camera and gallery. check allowance of authortiy.
     return (
       <View>
         <Text>
-          카메라/갤러리 접근 권한이 없습니다. 권한 허용 후 이용해주세요.
+          카메라/갤러리 접근 권한이 없습니다. 권한 허용 후 이용해주세요. no access permission for camera and gallery.
         </Text>
       </View>
     );
