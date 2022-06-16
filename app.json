@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "kycWebView",
-    "slug": "kycWebView",
+    "name": "KYC-RN-Expo",
+    "slug": "kycRNExpo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
